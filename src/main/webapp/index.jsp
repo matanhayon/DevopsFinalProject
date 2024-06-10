@@ -9,7 +9,7 @@
     <form>
         <label for="inputBox">Enter something:</label><br>
         <input type="text" id="inputBox" name="inputBox"><br><br>
-        <button type="submit">Submit</button>
+        <button onclick="alert('submit')" type="submit">Submit</button>
     </form>
     
     <button onclick="alert('Button Clicked!')">Click Me!</button>
