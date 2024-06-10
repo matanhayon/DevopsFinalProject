@@ -1,14 +1,14 @@
 <%@ page import="java.util.ArrayList" %>
 <%@ page import="java.util.List" %>
 <%
-    // Simulating a database using application context
+    // simulating a database using application context
     List<String[]> posts = (List<String[]>) application.getAttribute("posts");
     if (posts == null) {
         posts = new ArrayList<>();
         application.setAttribute("posts", posts);
     }
 
-    // Handle form submission
+    // handle form submission
     String title = request.getParameter("title");
     String content = request.getParameter("content");
     if (title != null && content != null) {
