@@ -1,11 +1,17 @@
+<!DOCTYPE html>
 <html>
 <head>
-    <title>My JSP Page</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>KK JavaTutorials</title>
 </head>
 <body>
-    <h1>Welcome to My JSP Page</h1>
-    <p>This is a paragraph of static content.</p>
-    <script src="scripts.js"></script>
+    <h2>Welcome to Roy Gon Matan JavaTutorials..</h2>
+    
+    <form>
+        <label for="inputBox">Enter something:</label><br>
+        <input type="text" id="inputBox" name="inputBox"><br><br>
+        <button type="submit">Submit</button>
+    </form>
+    
+    <button onclick="alert('Button Clicked!')">Click Me!</button>
 </body>
 </html>
