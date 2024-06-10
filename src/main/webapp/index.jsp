@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>KK JavaTutorials</title>
+    <title>Roy Gon Matan</title>
 </head>
 <body>
     <h2>Welcome to Roy Gon Matan JavaTutorials..</h2>
