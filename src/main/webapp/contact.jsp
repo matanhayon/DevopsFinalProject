@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Personal Blog</title>
+    <title>Contact Us - Our Personal Blog</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -39,42 +39,30 @@
         .content {
             padding: 20px;
         }
-        .post {
+        .contact-form {
             background-color: #fff;
             padding: 20px;
-            margin-bottom: 20px;
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        .post h2 {
-            margin-top: 0;
-        }
-        .post p {
-            line-height: 1.6;
-        }
-        .new-post {
-            margin-bottom: 20px;
-        }
-        .new-post textarea {
+        .contact-form input,
+        .contact-form textarea {
             width: 100%;
-            height: 100px;
+            padding: 10px;
             margin-bottom: 10px;
-            background-color: #fff; /* White background for text area */
-            border: 1px solid #ccc; /* Light gray border */
+            border: 1px solid #ccc;
             border-radius: 5px;
-            padding: 5px;
-            resize: vertical; /* Allow vertical resizing */
         }
-        .new-post button {
+        .contact-form button {
             padding: 10px 20px;
-            background-color: #007bff; /* Blue button color */
+            background-color: #007bff;
             color: #fff;
             border: none;
             cursor: pointer;
             transition: background-color 0.3s;
         }
-        .new-post button:hover {
-            background-color: #0056b3; /* Darker blue on hover */
+        .contact-form button:hover {
+            background-color: #0056b3;
         }
         footer {
             background-color: #333;
@@ -87,51 +75,36 @@
         }
     </style>
     <script>
-        function showHome() {
-            alert("This is the home page :)");
-        }
-        function showAbout() {
-            alert("We are Roy, Matan, Gon and Ron");
-        }
-        function showContact() {
-            alert("We will contact you...");
-        }
-        function publishPost() {
-            const textBox = document.getElementById('postContent');
-            const content = textBox.value;
-            if (content.trim() === '') {
-                alert('Please write something before publishing.');
+        function submitForm() {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            
+            if (name.trim() === '' || email.trim() === '' || message.trim() === '') {
+                alert('Please fill out all fields before submitting.');
                 return;
             }
-
-            const postSection = document.getElementById('posts');
-            const newPost = document.createElement('div');
-            newPost.className = 'post';
-            newPost.innerHTML = `
-                <h2>New Post</h2>
-                <p>${content}</p>
-            `;
-
-            postSection.prepend(newPost);
-            textBox.value = '';
+            
+            alert('Thank you for contacting us, ' + name + '! We will get back to you shortly.');
         }
     </script>
 </head>
 <body>
     <header>
-        <h1>Our Personal Blog</h1>
+        <h1>Contact Us</h1>
     </header>
     <nav>
         <a href="index.jsp">Home</a>
-        <a href="about.jsp">About us</a>
+        <a href="about.jsp">About Me</a>
         <a href="contact.jsp">Contact</a>
     </nav>
     <div class="content">
-        <div class="new-post">
-            <textarea id="postContent" placeholder="Write your post here..."></textarea>
-            <button onclick="publishPost()">Publish</button>
+        <div class="contact-form">
+            <input type="text" id="name" placeholder="Your Name">
+            <input type="email" id="email" placeholder="Your Email">
+            <textarea id="message" placeholder="Your Message" rows="5"></textarea>
+            <button onclick="submitForm()">Submit</button>
         </div>
-        <div id="posts"></div>
     </div>
     <footer>
         <p>&copy; 2024 Our Personal Blog. All rights reserved.</p>
