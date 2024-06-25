@@ -100,7 +100,7 @@
         </div>
         <div class="team-member">
             <img src="pictures/matan.jpg" alt="Matan Hayon">
-            <h2>Matan Hayon</h2>
+            <h2>Matan Moshe Hayon</h2>
             <p>Internet troll.</p>
         </div>
     </div>
