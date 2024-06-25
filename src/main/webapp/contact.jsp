@@ -103,7 +103,7 @@
             <input type="text" id="name" placeholder="Your Name">
             <input type="email" id="email" placeholder="Your Email">
             <textarea id="message" placeholder="Your Message" rows="5"></textarea>
-            <button onclick="submitForm()">Submit</button>
+            <button onclick="submitForm()">Send</button>
         </div>
     </div>
     <footer>
